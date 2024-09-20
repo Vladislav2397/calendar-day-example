@@ -23,14 +23,14 @@ body {
 }
 
 .ec {
-	height: 640px;
+	/* height: 640px; */
 }
 .ec.ec-day-grid {
 	height: 400px;
 }
 @media (min-width: 576px) {
 	.ec {
-		height: 700px;
+		/* height: 700px; */
 	}
 	.ec.ec-day-grid {
 		height: 500px;
@@ -38,7 +38,7 @@ body {
 }
 @media (min-width: 992px) {
 	.ec {
-		height: 800px;
+		/* height: 800px; */
 	}
 	.ec.ec-day-grid {
 		height: 700px;

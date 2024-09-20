@@ -39,17 +39,6 @@ const ec = new EventCalendar(document.getElementById('ec'), {
 });
 
 function createEvents() {
-    let days = [];
-
-    for (let i = 0; i < 7; ++i) {
-        let day = new Date();
-        let diff = i - day.getDay();
-        day.setDate(day.getDate() + diff);
-        days[i] = day.getFullYear() + "-" + _pad(day.getMonth()+1) + "-" + _pad(day.getDate());
-    }
-
-    console.log('days', days);
-
     const current = new Date().toISOString().slice(0, 10)
 
     console.log('current', current);
@@ -61,14 +50,10 @@ function createEvents() {
         {start: current + " 09:00", end: current + " 09:30", resourceId: 2, title: "Eating", color: '#ff0000'},
         {start: current + " 09:30", end: current + " 10:00", resourceId: 3, title: "Freetime", color: '#00ff00'},
         {start: current + " 10:00", end: current + " 13:00", resourceId: 4, title: "Working", color: '#000000'},
+        {start: current + " 13:00", end: current + " 14:00", resourceId: 2, title: "Eating", color: '#ff0000'},
         {start: current + " 14:00", end: current + " 19:00", resourceId: 4, title: "Working", color: '#000000'},
         {start: current + " 19:00", end: current + " 22:00", resourceId: 3, title: "Freetime", color: '#00ff00'},
         {start: current + " 22:00", end: current + " 23:00", resourceId: 3, title: "Nongadgettime", color: '#00ffff'},
         {start: current + " 23:00", end: current + " 23:59", resourceId: 1, title: "Sleeping", color: '#0000ff'},
     ];
-}
-
-function _pad(num) {
-    let norm = Math.floor(Math.abs(num));
-    return (norm < 10 ? '0' : '') + norm;
 }
