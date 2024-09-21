@@ -44,16 +44,17 @@ function createEvents() {
     console.log('current', current);
 
     return [
-        {start: current + " 00:00", end: current + " 07:00", resourceId: 1, title: "Sleeping", color: '#0000ff'},
-        {start: current + " 07:00", end: current + " 07:30", resourceId: 2, title: "Eating", color: '#ff0000'},
-        {start: current + " 07:30", end: current + " 09:00", resourceId: 3, title: "Freetime", color: '#00ff00'},
-        {start: current + " 09:00", end: current + " 09:30", resourceId: 2, title: "Eating", color: '#ff0000'},
-        {start: current + " 09:30", end: current + " 10:00", resourceId: 3, title: "Freetime", color: '#00ff00'},
-        {start: current + " 10:00", end: current + " 13:00", resourceId: 4, title: "Working", color: '#000000'},
-        {start: current + " 13:00", end: current + " 14:00", resourceId: 2, title: "Eating", color: '#ff0000'},
-        {start: current + " 14:00", end: current + " 19:00", resourceId: 4, title: "Working", color: '#000000'},
-        {start: current + " 19:00", end: current + " 22:00", resourceId: 3, title: "Freetime", color: '#00ff00'},
-        {start: current + " 22:00", end: current + " 23:00", resourceId: 3, title: "Nongadgettime", color: '#00ffff'},
-        {start: current + " 23:00", end: current + " 23:59", resourceId: 1, title: "Sleeping", color: '#0000ff'},
+        {start: current + " 00:00", end: current + " 07:00", title: "Sleeping", color: '#0000ff'},
+        {start: current + " 07:00", end: current + " 07:30", title: "Eating", color: '#ff0000'},
+        {start: current + " 07:30", end: current + " 09:00", title: "Design", color: '#00ff00'},
+        {start: current + " 09:00", end: current + " 09:30", title: "Eating", color: '#ff0000'},
+        {start: current + " 09:30", end: current + " 10:00", title: "Freetime", color: '#00ff00'},
+        {start: current + " 10:00", end: current + " 13:00", title: "Working", color: '#000000'},
+        {start: current + " 13:00", end: current + " 14:00", title: "Eating", color: '#ff0000'},
+        {start: current + " 14:00", end: current + " 19:00", title: "Working", color: '#000000'},
+        {start: current + " 19:00", end: current + " 20:00", title: "Subwork", color: '#00ff00'},
+        {start: current + " 20:00", end: current + " 22:00", title: "Freetime", color: '#00ff00'},
+        {start: current + " 22:00", end: current + " 23:00", title: "Nongadgettime", color: '#00ffff'},
+        {start: current + " 23:00", end: current + " 23:59", title: "Sleeping", color: '#0000ff'},
     ];
 }
