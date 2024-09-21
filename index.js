@@ -29,6 +29,7 @@ function createEvents() {
         sleepingEvent('00:00', '07:00'),
         eatingItem('07:00', '07:30'),
         designItem('07:30', '09:00'),
+        eatingItem('09:00', '09:30'),
         freetimeItem('09:30', '10:00'),
         workingItem('10:00', '13:00'),
         eatingItem('13:00', '14:00'),
