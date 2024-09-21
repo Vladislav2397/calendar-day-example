@@ -38,6 +38,20 @@ const ec = new EventCalendar(document.getElementById('ec'), {
     selectable: true
 });
 
+
+function createEventItemFactory(title, color) {
+    return (timeStart, timeEnd) => {
+        const current = new Date().toISOString().slice(0, 10)
+
+        return {
+            start: current + ' ' + timeStart,
+            end: current + ' ' + timeEnd,
+            title,
+            color,
+        }
+    }
+}
+
 const sleepingEvent = createEventItemFactory('Sleeping', '#0000ff')
 const eatingItem = createEventItemFactory('Eating', '#ff0000')
 const designItem = createEventItemFactory('Design', '#00ff00')
@@ -64,17 +78,4 @@ function createEvents() {
         nongadgettimeItem('22:00', '23:00'),
         sleepingEvent('23:00', '23:59'),
     ];
-}
-
-function createEventItemFactory(title, color) {
-    return (timeStart, timeEnd) => {
-        const current = new Date().toISOString().slice(0, 10)
-
-        return {
-            start: current + ' ' + timeStart,
-            end: current + ' ' + timeEnd,
-            title,
-            color,
-        }
-    }
 }
